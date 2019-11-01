@@ -1,58 +1,107 @@
+/* Estilos generales */
 body {
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    background-image: url("../imagenes/pared-1.jpg"); 
 }
+
 a {
     text-decoration: none;
+    list-style: none;   
 }
 
-.titulo {
+header {
+    font-size: 1.50em; 
+}
+
+img {
+    border-radius: 0.5em;  
+}
+
+/* unvisited link */
+a:link {
+    color: #0000B3;
+}
+
+/* visited link */
+a:visited {
+    color: #33334d;
+}
+  
+/* mouse over link */
+a:hover {
+    color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+    color: #0000FF;
+}
+
+ol {
+    padding: 0;
+}
+
+.dTitle {
     width: 100%;
-    height: 4.6875em;
-    background: #993300;
+    height: 4.6875rem;   
+    background: rgb(255, 230, 242, 0.7);
     text-align: center;
-    
-}
-.titulo1 {
-    padding-top: 15px;
-}
-nav {
-    
-    display: inline-block;
-    margin-left: 0px;
-    border: 1px solid black;
-    
-    padding-right: 15px;
-    margin-top: 1.25em;
-}
-.tnav {
-    padding-left: 40px;
-}
-.container {
-    
-    display: block;
-    
-    
+    border-radius: 0.5em;  
 }
 
-@media (min-width: 640px) {
-    nav {        
-        position: absolute;   
-    }
-    .container {
-        margin-top: 1.25em;
-        text-align: center;
-        float: right;
-    }
-    .main-container {
-        
-        max-width: 70%;
-        margin: auto;       
+.title {
+    padding-top: 0.3125rem;
+    margin: 0; 
+    font-family: 'Kaushan Script', cursive;
+    font-size: 2.5em; 
+}
+
+footer {
+    width: 100%;
+    height: 4.6875rem;   
+    background: rgb(255, 230, 242, 0.7);
+    text-align: center;
+    border-radius: 0.5em; 
+}
+
+nav {   
+    border-radius: 0.5em;
+    padding: 0.9375em 0.9375em 0;    
+    margin-top: 1.25em;
+    background: rgb(212, 212, 245, 0.7);
+    margin-bottom: 1.25em;
+    font-family: 'Merienda One', cursive;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: calc(100vh - 4.6875rem);      
+}
+
+section {  
+    border-radius: 0.5em;
+    padding: 1.5625em;
+    background: rgb(230, 230, 230, 0.7);
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    font-family: 'Merienda One', cursive;
+}
+
+@media (min-width: 40.0625em) and (max-width: 64em) {
+    .flex-container {
+        flex-direction: row;
+        justify-content: space-around;
     }
 }
-@media (min-width: 1100px) {
-    .main-container {
-        
-        max-width: 50%;
-        margin: auto;       
-    }
+
+@media (min-width: 64.0625em) {
+    .flex-container {
+        flex-direction: row;
+        justify-content: space-around;
+    } 
 }
+
