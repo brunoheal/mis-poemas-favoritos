@@ -16,7 +16,9 @@ header {
 }
 
 img {
-    border-radius: 0.5em;  
+    border-radius: 0.5em;
+    max-width: 100%;
+    height: auto;  
 }
 
 /* unvisited link */
@@ -56,6 +58,11 @@ ol {
     margin: 0; 
     font-family: 'Kaushan Script', cursive;
     font-size: 2.5em; 
+    color: #33334D;
+}
+
+a > h1.title:link, a > h1.title:visited, a > h1.title:hover, a > h1.title:active {
+    color: #33334D;
 }
 
 footer {
@@ -95,6 +102,9 @@ section {
     .flex-container {
         flex-direction: row;
         justify-content: space-around;
+    }
+    .image-container {
+        flex-direction: column;
     }
 }
 
