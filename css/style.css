@@ -1,121 +1,231 @@
 /* Fuentes */
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Merienda+One&display=swap');
+/* Fin fuentes */
 
-/* Estilos generales */
-body {
+/* Globales */
+:root {
+    /* Tipografías */
+    --fuentePrimaria: 'Merienda One', cursive;
+    --fuenteSecundaria: 'Kaushan Script', cursive;
+    /* Colores */
+    --colorEnlace: #996600;
+    --colorEnlaceVisitado: #9933ff;
+    --colorEnlaceHover: #FF00FF;
+    --colorEnlaceActivo: #0000FF;
+    --colorNavFooter: #ffe6f2b3;
+    --colorBloqueIndice: #d4d4f5b3;
+    --colorBloquePoemas: #e6e6e6b3;
+    --colorTitulo: #33334D;
+    --colorH2: #336699;
+    --colorParrafo: #cc7a00;
+}
+
+html {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
+    font-size: 62.5%; /* 10px = 1rem */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.7;
     margin: 0;
-    background-image: url("../imagenes/pared-1.jpg"); 
+    background-image: url("../imagenes/pared-1.jpg");
+}
+
+.container-body {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: calc(100vh - 4.6875rem);
 }
 
 a {
-    text-decoration: none;
-    list-style: none;   
+    text-decoration: none;   
 }
 
-header {
-    font-size: 1.50em; 
-}
-
-img {
-    border-radius: 0.5em;
-    max-width: 100%;
-    height: auto;  
-}
-
-/* unvisited link */
-a:link {
-    color: #0000B3;
-}
-
-/* visited link */
-a:visited {
-    color: #33334d;
-}
-  
-/* mouse over link */
-a:hover {
-    color: #FF00FF;
-}
-
-/* selected link */
-a:active {
-    color: #0000FF;
-}
-
-ol {
+ul {
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
-.dTitle {
+img {
+    border-radius: .8rem;
+    max-width: 100%;
+    height: auto;  
+}
+/* Fin globales */
+
+/* Enlaces */
+/* Enlace sin visitar */
+a:link {
+    color: var(--colorEnlace);
+}
+
+/* Enlace visitado */
+a:visited {
+    color: var(--colorEnlaceVisitado);
+}
+  
+/* Puntero sobre el enlace */
+a:hover {
+    color: var(--colorEnlaceHover);
+}
+
+/* Enlace seleccionado */
+a:active {
+    color: var(--colorEnlaceActivo);
+}
+/* Fin enlaces */
+
+/* Encabezado y footer */
+.navFooter {
     width: 100%;
-    height: 4.6875rem;   
-    background: rgb(255, 230, 242, 0.7);
+    height: 7.5rem;   
+    background: var(--colorNavFooter);
     text-align: center;
-    border-radius: 0.5em;  
+    border-radius: .8rem;  
 }
 
 .title {
-    padding-top: 0.3125rem;
-    margin: 0; 
-    font-family: 'Kaushan Script', cursive;
-    font-size: 2.5em; 
-    color: #33334D;
+    font-family: var(--fuenteSecundaria);
+    font-size: 3.3rem; 
+    color: var(--colorTitulo);
 }
 
-a > h1.title:link, a > h1.title:visited, a > h1.title:hover, a > h1.title:active {
-    color: #33334D;
+.containerTitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-footer {
-    width: 100%;
-    height: 4.6875rem;   
-    background: rgb(255, 230, 242, 0.7);
+.containerFooter {
+    display: flex;     
+}
+/* Fin encabezado y footer */
+
+/* Contenedores principales */
+.containerIndice {
+    display: flex;
+    flex-direction: column; 
     text-align: center;
-    border-radius: 0.5em; 
+    border-radius: .8rem;
+    padding: 2.5rem; 
+    margin: 2rem 0;  
+    background: var(--colorBloqueIndice);
+    font-family: var(--fuentePrimaria);
+    width: 100%;
 }
 
-nav {   
-    border-radius: 0.5em;
-    padding: 0.9375em 0.9375em 0;    
-    margin-top: 1.25em;
-    background: rgb(212, 212, 245, 0.7);
-    margin-bottom: 1.25em;
-    font-family: 'Merienda One', cursive;
-}
-
-.flex-container {
+.containerPoemas, .containerImagenes, .containerAcerca {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    min-height: calc(100vh - 4.6875rem);      
+    text-align: center; 
+    border-radius: .8rem;
+    padding: 2.5rem;
+    background: var(--colorBloquePoemas);
+    margin: 2rem 0;
+    font-family: var(--fuentePrimaria);
+    width: 100%;
 }
 
-section {  
-    border-radius: 0.5em;
-    padding: 1.5625em;
-    background: rgb(230, 230, 230, 0.7);
-    margin-top: 1.25em;
-    margin-bottom: 1.25em;
-    font-family: 'Merienda One', cursive;
+.containerAcerca img {
+    margin-top: 1.8rem;
+    
 }
 
-@media (min-width: 40.0625em) and (max-width: 64em) {
-    .flex-container {
-        flex-direction: row;
-        justify-content: space-around;
+article p:first-child {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2.4rem; 
+    margin: 0 0 1rem;
+    color: var(--colorH2);
+}
+
+li, p {
+    font-size: 1.8rem; 
+}
+
+p {
+    color: var(--colorParrafo);   
+}
+/* Fin contenedores principales */
+
+/* Media queries */
+@media (min-width: 350px) {
+    .title {
+        font-size: 4rem;
     }
-    .image-container {
-        flex-direction: column;
+}
+
+@media (min-width: 575px) {
+    .containerPoemas, .containerIndice, .containerImagenes {
+        max-width: 50%;
     }
 }
 
-@media (min-width: 64.0625em) {
-    .flex-container {
-        flex-direction: row;
-        justify-content: space-around;
+@media (min-width:480px) and (max-width: 767px) {
+    li, p {
+        font-size: 1.9rem; 
     } 
+    
+    h2 {
+        font-size: 2.5rem; 
+    }
 }
 
+@media (min-width: 768px) {
+    .containerIndice, .containerPoemas, .containerImagenes {
+        width: auto;
+    }
+}
+
+@media (min-width:768px) and (max-width: 1199px) {
+    li, p {
+        font-size: 2rem; 
+    } 
+    
+    h2 {
+        font-size: 2.6rem; 
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1499px) {
+    .container-body {
+        width: 80%;
+    }
+
+    li, p {
+        font-size: 2.1rem; 
+    } 
+    
+    h2 {
+        font-size: 2.7rem; 
+    }
+}
+
+@media (min-width: 1500px) {
+    .container-body {
+        width: 70%;
+    }
+    
+    li, p {
+        font-size: 2.2rem; 
+    } 
+    
+    h2 {
+        font-size: 2.8rem; 
+    }
+}
+/* Fin media queries */
+/* Fin estilos */
