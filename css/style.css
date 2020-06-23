@@ -43,8 +43,7 @@ body {
     width: 90%;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     min-height: calc(100vh - 4.6875rem);
 }
 
@@ -81,13 +80,13 @@ img {
     width: 6.2rem; 
 } 
 
-@media (min-width:480px) and (max-width: 767px) {
+@media (min-width:480px) {
     #btnSubir {
         width: 6.6rem;
     }
 }
 
-@media (min-width:768px) and (max-width: 1199px) {
+@media (min-width:768px) {
     #btnSubir {
         width: 7rem;
     }
@@ -97,9 +96,7 @@ img {
     #btnSubir {
         width: 7.5rem;
     }
-}
 
-@media (min-width: 992px) {
     #btnSubir:hover {
         opacity: 0.8;
     }
@@ -139,8 +136,9 @@ a:active {
 
 .title {
     font-family: var(--fuenteSecundaria);
-    font-size: 3.3rem; 
+    font-size: 3.6rem; 
     color: var(--colorTitulo);
+    margin: 0;
 }
 
 .containerTitulo {
@@ -155,9 +153,9 @@ a:active {
 /* Fin encabezado y footer */
 
 /* Contenedores principales */
-.containerIndice {
+.containerIndice, .containerPoemas, .containerImagenes, .containerAcerca {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     text-align: center;
     border-radius: .8rem;
     padding: 2.5rem; 
@@ -168,20 +166,11 @@ a:active {
 }
 
 .containerPoemas, .containerImagenes, .containerAcerca {
-    display: flex;
-    flex-direction: column;
-    text-align: center; 
-    border-radius: .8rem;
-    padding: 2.5rem;
     background: var(--colorBloquePoemas);
-    margin: 2rem 0;
-    font-family: var(--fuentePrimaria);
-    width: 100%;
 }
 
 .containerAcerca img {
     margin-top: 1.8rem;
-    
 }
 
 article p:first-child {
@@ -204,69 +193,76 @@ p {
 /* Fin contenedores principales */
 
 /* Media queries */
-@media (min-width: 350px) {
+@media (min-width: 480px) {
     .title {
-        font-size: 4rem;
+        font-size: 4.4rem;
     }
-}
 
-@media (min-width: 575px) {
-    .containerPoemas, .containerIndice, .containerImagenes {
-        max-width: 50%;
-    }
-}
-
-@media (min-width:480px) and (max-width: 767px) {
-    li, p {
-        font-size: 1.9rem; 
-    } 
-    
-    h2 {
-        font-size: 2.5rem; 
-    }
-}
-
-@media (min-width: 768px) {
-    .containerIndice, .containerPoemas, .containerImagenes {
-        width: auto;
-    }
-}
-
-@media (min-width:768px) and (max-width: 1199px) {
     li, p {
         font-size: 2rem; 
     } 
     
     h2 {
-        font-size: 2.6rem; 
+        font-size: 2.5rem; 
+    }
+
+    .navFooter {
+        height: 8rem;
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1499px) {
+@media (min-width: 600px) {
     .container-body {
-        width: 80%;
-    }
-
-    li, p {
-        font-size: 2.1rem; 
-    } 
-    
-    h2 {
-        font-size: 2.7rem; 
+        flex-direction: row;
     }
 }
 
-@media (min-width: 1500px) {
-    .container-body {
-        width: 70%;
+@media (min-width: 768px) {
+    .title {
+        font-size: 5.2rem;
     }
-    
+
+    .navFooter {
+        height: 8.3rem;
+    }
+
+    .containerIndice { 
+        max-width: 40%;
+        margin-right: 15%;   
+    }
+
     li, p {
         font-size: 2.2rem; 
     } 
     
     h2 {
-        font-size: 2.8rem; 
+        font-size: 2.7rem; 
+    }
+
+    .navFooter {
+        height: 9rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .title {
+        font-size: 6rem;
+    }
+
+    .navFooter {
+        height: 10rem;
+    }
+
+    .container-body {
+        width: 80%;
+    }
+
+    li, p {
+        font-size: 2.3rem; 
+    } 
+    
+    h2 {
+        font-size: 2.9rem; 
     }
 }
 /* Fin media queries */

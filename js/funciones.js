@@ -6,7 +6,6 @@ window.onscroll = function() {
     fScroll()
 };
 
-
 function fScroll() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         miBoton.style.display = "block";
