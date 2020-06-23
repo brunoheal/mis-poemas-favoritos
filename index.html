@@ -4,16 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Luz verde a la poesía | Inicio</title>
+        <title>Luz verde a la poesía</title>
         <link rel="icon" href="imagenes/ico.png" type="image/png" />
-        <meta property="og:image" content="imagenes/portada.jpg" />
+        <meta property="og:image" content="imagenes/castillo.jpg" />
         <link rel="stylesheet" type="text/css" href="css/style.css" /> 
     </head>
     <body>             
         <div class="containerTitulo navFooter">
             <a href="#"><h1 class="title">Luz verde a la poesía</h1></a>
         </div> 
-        <div class="container-body">   
+        <div class="container-body">
+            <div class="container-boton">
+                <img onclick="funcionSubir()" id="btnSubir" src="imagenes/boton.png" alt="Botón de subir" title="¡Arriba!" />               
+            </div>   
             <div class="containerIndice">
                 <nav>
                     <header>
@@ -51,6 +54,7 @@
         </div><!-- fin container-body -->
         <div class="containerFooter">
             <footer class="navFooter"></footer>
-        </div><!-- fin containerFooter -->      
+        </div><!-- fin containerFooter --> 
+        <script type="text/javascript" src="js/funciones.js"></script>      
     </body>
 </html>
